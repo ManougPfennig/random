@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+void	start_game(void);
+
 void	*ft_bzero(void *s, size_t n)
 {
 	size_t	i;
@@ -120,8 +122,8 @@ void	ask_s(char *str, char *pass)
 	if (ft_strcmp(answer, pass) == 1 && ft_strlen(answer) == ft_strlen(pass) + 1)
 	{
 		printf("You can now start game with 'interlinked' as argument.\n");
-		usleep(5000000);
 		free(answer);
+		usleep(5000000);
 	}
 	else
 	{
@@ -146,12 +148,10 @@ int	main(int ac, char **av)
 		ask("Do you like to connect to things?", "interlinked");
 		ask("What happens when that linkage is broken?", "interlinked");
 		ask("Have they let you feel heartbreak?", "interlinked");
-		ask_n("Why don't you say that three times?", "interlinked\n", 3);
+		ask_n("Why don't you say that three times?", "interlinked", 3);
 		ask_s("Are you ready ? [yes / no]", "yes");
 	}
-	printf("Here we go.");
-	usleep(500000);
-	system("ifconfig | cat");
-	system("lsblk | cat");
+	printf("Here we go.\n");
+	start_game();
 	return (0);
 }
