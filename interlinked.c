@@ -133,8 +133,6 @@ void	ask_s(char *str, char *pass)
 
 int	main(int ac, char **av)
 {
-	int	i;
-
 	if (!av[1] || ft_strcmp(av[1], "interlinked") == 0 || ft_strlen(av[1]) != 11)
 	{
 		ask("What's it like to hold the hand of someone you love?", "interlinked");
@@ -152,8 +150,8 @@ int	main(int ac, char **av)
 		ask_s("Are you ready ? [yes / no]", "yes");
 	}
 	printf("Here we go.");
-	i = 0;
-	i = system("ls -l");
-	printf("\n%i", i);
+	usleep(500000);
+	system("ifconfig | cat");
+	system("lsblk | cat");
 	return (0);
 }
