@@ -85,7 +85,7 @@ void	loading_screen(void)
     int i;
 
     for (i = 0; i < 50; i++) {
-        printf("\rLoading %c attend jte DDOS en 22 le sang", spinner[i % 4]);
+        printf("\rLoading %c attend jte DDOS en 22 le sang 😂😂", spinner[i % 4]);
         fflush(stdout);
         usleep(100000);  // Sleep for 100 milliseconds (adjust as needed)
     }
