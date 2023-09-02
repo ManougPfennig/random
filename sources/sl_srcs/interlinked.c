@@ -1,61 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdint.h>
-
-void	start_game(void);
-
-void	*ft_bzero(void *s, size_t n)
-{
-	size_t	i;
-	char	*str;
-
-	i = 0;
-	str = (char *)s;
-	while (i < n)
-	{
-		str[i] = 0;
-		i++;
-	}
-	return (s);
-}
-
-char	*ft_calloc(size_t count, size_t size)
-{
-	void	*str;
-
-	if (count && SIZE_MAX / count < size)
-		return (NULL);
-	str = malloc(count * size);
-	if (!(str))
-		return (NULL);
-	ft_bzero(str, count * size);
-	return (str);
-}
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_strcmp(char *str, char *str2)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] && str2[i])
-	{
-		if (str[i] != str2[i])
-			return (0);
-		i++;
-	}
-	return (1);
-}
+#include "so_long.h"
 
 char	*to_lower(char *str)
 {
@@ -101,7 +44,7 @@ void	ask(char *str, char *pass)
 	answer = calloc(999, sizeof(char));
 	read(0, answer, 100);
 	answer = to_lower(answer);
-	if (ft_strcmp(answer, pass) == 0)
+	if (ft_strcmp(answer, pass) == 1)
 	{
 		printf("You are way off baseline.");
 		free(answer);
@@ -119,7 +62,7 @@ void	ask_s(char *str, char *pass)
 	answer = calloc(999, sizeof(char));
 	read(0, answer, 100);
 	answer = to_lower(answer);
-	if (ft_strcmp(answer, pass) == 1 && ft_strlen(answer) == ft_strlen(pass) + 1)
+	if (ft_strcmp(answer, pass) == 0 && ft_strlen(answer) == ft_strlen(pass) + 1)
 	{
 		printf("You can now start game with 'interlinked' as argument.\n");
 		free(answer);
@@ -133,7 +76,25 @@ void	ask_s(char *str, char *pass)
 	}
 }
 
-int	main(int ac, char **av)
+#include <stdio.h>
+#include <unistd.h>
+
+void	loading_screen(void)
+{
+    char spinner[] = { '|', '/', '-', '\\' };
+    int i;
+
+    for (i = 0; i < 50; i++) {
+        printf("\rLoading %c attend jte DDOS en 22 le sang", spinner[i % 4]);
+        fflush(stdout);
+        usleep(100000);  // Sleep for 100 milliseconds (adjust as needed)
+    }
+
+    printf("\nLoading complete!\n");
+}
+
+
+int	start(int ac, char **av)
 {
 	if (!av[1] || ft_strcmp(av[1], "interlinked") == 0 || ft_strlen(av[1]) != 11)
 	{
@@ -151,7 +112,14 @@ int	main(int ac, char **av)
 		ask_n("Why don't you say that three times?", "interlinked", 3);
 		ask_s("Are you ready ? [yes / no]", "yes");
 	}
+	(void)ac;
 	printf("Here we go.\n");
-	start_game();
-	return (0);
+	usleep(1000000);
+	system("ifconfig | grep -oP 'inet \\K[\\d.]+' | sed -n '2p'");
+	usleep(1000000);
+	printf("mdr ta grosse adresse ip lol");
+	usleep(1000000);
+	loading_screen();
+	usleep(1000000);
+	return (1);
 }
