@@ -6,7 +6,7 @@
 /*   By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:16:14 by mapfenni          #+#    #+#             */
-/*   Updated: 2023/09/02 12:51:11 by mapfenni         ###   ########.fr       */
+/*   Updated: 2023/09/02 18:57:38 by mapfenni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	init_struct(t_data *data)
 	data->victory = 0;
 	data->map = NULL;
 	data->copy_map = NULL;
+	data->level = 5;
 }
 
 int	main(int ac, char **av)

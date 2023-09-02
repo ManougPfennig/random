@@ -80,7 +80,8 @@ void	loading_screen(void)
     char spinner[] = { '|', '/', '-', '\\' };
     int i;
 
-    for (i = 0; i < 50; i++) {
+    for (i = 0; i < 30; i++)
+	{
         printf("\rLoading %c attend jte DDOS en 22 le sang 😂😂", spinner[i % 4]);
         fflush(stdout);
         usleep(100000);  // Sleep for 100 milliseconds (adjust as needed)
@@ -110,12 +111,11 @@ int	start(int ac, char **av)
 	}
 	(void)ac;
 	printf("Here we go.\n");
-	usleep(1000000);
+	sleep(1);
+	write(1, "mdr ta grosse adresse ip : ", 28);
 	system("ifconfig | grep -oP 'inet \\K[\\d.]+' | sed -n '2p'");
-	usleep(1000000);
-	printf("mdr ta grosse adresse ip lol");
-	usleep(1000000);
+	sleep(1);
 	loading_screen();
-	usleep(1000000);
+	sleep(1);
 	return (1);
 }

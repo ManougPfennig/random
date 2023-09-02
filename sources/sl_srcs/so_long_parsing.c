@@ -6,7 +6,7 @@
 /*   By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:16:24 by mapfenni          #+#    #+#             */
-/*   Updated: 2023/09/02 13:14:39 by mapfenni         ###   ########.fr       */
+/*   Updated: 2023/09/02 17:10:00 by mapfenni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	arg_parsing(int ac, char **av, t_data *data)
 {
 	(void)ac;
 	ft_printf("Checking map...\n", av[1]);
-	return (check_map("map/gigamap.ber", data));
+	return (check_map("map/tutorial.ber", data));
 }
 
 char	**ft_copy_map(char **map)
