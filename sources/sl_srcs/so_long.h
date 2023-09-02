@@ -6,7 +6,7 @@
 /*   By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 16:46:47 by mapfenni          #+#    #+#             */
-/*   Updated: 2023/09/02 12:53:18 by mapfenni         ###   ########.fr       */
+/*   Updated: 2023/09/02 14:55:22 by mapfenni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <string.h>
-# include <mlx.h>
+# include "../../minilibx/mlx.h"
 # include "../ft_printf/ft_printf.h"
 # include <math.h>
 # include <stdint.h>
