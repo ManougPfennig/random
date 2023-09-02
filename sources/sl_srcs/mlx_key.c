@@ -6,7 +6,7 @@
 /*   By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:56:15 by mapfenni          #+#    #+#             */
-/*   Updated: 2023/09/02 18:57:21 by mapfenni         ###   ########.fr       */
+/*   Updated: 2023/09/02 18:59:33 by mapfenni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	key_pressed(int key, t_data *data)
 {
 	if (data->victory)
 	{
-		if(data->level < 6)
+		if (data->level < 6)
 			data->victory = 0;
 		else
 			data->victory = 1;
