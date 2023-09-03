@@ -6,7 +6,7 @@
 /*   By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:16:14 by mapfenni          #+#    #+#             */
-/*   Updated: 2023/09/02 18:59:20 by mapfenni         ###   ########.fr       */
+/*   Updated: 2023/09/02 19:20:40 by mapfenni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 
-	start(ac, av);
+	start();
 	init_struct(&data);
 	if (arg_parsing(ac, av, &data))
 	{

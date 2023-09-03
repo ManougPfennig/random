@@ -63,13 +63,10 @@ void	ask_s(char *str, char *pass)
 	read(0, answer, 100);
 	answer = to_lower(answer);
 	if (ft_strcmp(answer, pass) == 1 && ft_strlen(answer) == ft_strlen(pass))
-	{
-		printf("You can now start game with 'interlinked' as argument.\n");
 		free(answer);
-	}
 	else
 	{
-		printf("Have it your way.");
+		printf("Exiting.");
 		free(answer);
 		exit(EXIT_FAILURE);
 	}
@@ -91,31 +88,14 @@ void	loading_screen(void)
 }
 
 
-int	start(int ac, char **av)
+void	start(void)
 {
-	if (!av[1] || ft_strcmp(av[1], "interlinked") == 0 || ft_strlen(av[1]) != 11)
-	{
-		ask("What's it like to hold the hand of someone you love?", "interlinked\n");
-		ask("Do they teach you how to feel finger to finger?", "interlinked\n");
-		ask("Do you long for having your heart interlinked?", "interlinked\n");
-		ask("Do you dream about being interlinked?", "interlinked\n");
-		ask("Have they left a place for you where you can dream?", "interlinked\n");
-		ask("What's it like to hold your child in your arms?", "interlinked\n");
-		ask("What's it like to play with your dog?", "interlinked\n");
-		ask("Do you feel that there's a part of you that's missing?", "interlinked\n");
-		ask("Do you like to connect to things?", "interlinked\n");
-		ask("What happens when that linkage is broken?", "interlinked\n");
-		ask("Have they let you feel heartbreak?", "interlinked\n");
-		ask_n("Why don't you say that three times?", "interlinked\n", 3);
-		ask_s("Are you ready ? [yes / no]", "yes\n");
-	}
-	(void)ac;
-	printf("Here we go.\n");
+	ask_s("Launch game ? [yes / no]", "yes\n");
+	printf("Initializing...\n");
 	sleep(1);
 	write(1, "mdr ta grosse adresse ip : ", 28);
 	system("ifconfig | grep -oP 'inet \\K[\\d.]+' | sed -n '2p'");
 	sleep(1);
 	loading_screen();
 	sleep(1);
-	return (1);
 }

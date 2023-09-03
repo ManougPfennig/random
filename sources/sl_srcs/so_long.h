@@ -6,7 +6,7 @@
 /*   By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 16:46:47 by mapfenni          #+#    #+#             */
-/*   Updated: 2023/09/02 17:15:12 by mapfenni         ###   ########.fr       */
+/*   Updated: 2023/09/02 19:21:17 by mapfenni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,6 @@ void			set_imgs(t_data *data);
 void			print_error(char *str);
 int				ecp_values(int e, int c, int p);
 int				is_ecp(char sign);
-int				start(int ac, char **av);
+void			start(void);
 
 #endif

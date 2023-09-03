@@ -6,11 +6,11 @@
 #    By: mapfenni <mapfenni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 13:49:45 by mapfenni          #+#    #+#              #
-#    Updated: 2023/09/02 12:53:44 by mapfenni         ###   ########.fr        #
+#    Updated: 2023/09/02 19:10:27 by mapfenni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = so_long
+NAME = nils
 
 SRCS = ./sources/sl_srcs/flood_fill.c ./sources/sl_srcs/ft_function.c \
 ./sources/sl_srcs/ft_function3.c ./sources/sl_srcs/main.c \
